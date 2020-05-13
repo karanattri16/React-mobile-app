@@ -148,6 +148,7 @@ class ProductProvider extends Component {
       cartTotal: total
     });
   };
+  //Hi
   render() {
     return (
       <ProductContext.Provider
@@ -163,6 +164,7 @@ class ProductProvider extends Component {
           clearCart: this.clearCart
         }}
       >
+        
         {this.props.children}
       </ProductContext.Provider>
     );
