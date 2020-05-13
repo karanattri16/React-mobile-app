@@ -148,7 +148,7 @@ class ProductProvider extends Component {
       cartTotal: total
     });
   };
-  //Hi
+  //H
   render() {
     return (
       <ProductContext.Provider
