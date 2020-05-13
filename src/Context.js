@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { storeProducts, detailProduct } from "./data";
-import { ButtonContainer } from "./components/Button";
-import { ThemeProvider } from "styled-components";
 const ProductContext = React.createContext();
 const ProductConsumer = ProductContext.Consumer;
 
@@ -30,6 +28,7 @@ class ProductProvider extends Component {
     storeProducts.map(item => {
       const singleItem = { ...item };
       tempProducts = [...tempProducts, singleItem];
+      return tempProducts;
     });
 
     this.setState({ products: tempProducts });

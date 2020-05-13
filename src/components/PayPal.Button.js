@@ -46,7 +46,7 @@ export default class PayPalButton extends React.Component {
         env={env}
         client={client}
         currency={currency}
-        total={this.props.total}
+        total={total}
         onError={onError}
         onSuccess={onSuccess}
         onCancel={onCancel}
