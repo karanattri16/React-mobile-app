@@ -11,7 +11,7 @@ class ProductProvider extends Component {
   //2.we are not storing the ref here in products property in state object but actually we are filling
   //it up with a copy of data using the original data file. This will solve the issue that would otherwise occur.
   //3. the testRun method below will show the issue here if we set the products:storeProducts
-  // hi
+  // karna
   state = {
     products: [],
     detailProduct: detailProduct,
