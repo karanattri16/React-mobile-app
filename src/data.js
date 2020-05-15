@@ -37,7 +37,7 @@ export const storeProducts = [
   },
   {
     id: 4,
-    title: "One Plus 8 - Interstellar Glow",
+    title: "One Plus 8 -Interstellar",
     img: "img/product-4.png",
     price: 999,
     company: "One Plus",

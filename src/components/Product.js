@@ -3,9 +3,12 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../Context";
 import PropTypes from "prop-types";
+
 class Product extends Component {
+  
   render() {
     const { id, title, img, price, inCart } = this.props.product;
+    
     return (
       <ProductWrapper className="col-9 mx-auto col-sm-6 col-md-4 col-lg-3 my-3">
         <div className="card">
@@ -42,7 +45,8 @@ class Product extends Component {
 
           {/*card footer*/}
           <div className="card-footer d-flex justify-content-between">
-            <p className="align-self-cneter mb-0">{title}</p>
+  
+            <p className="align-self-center mb-0">{title}</p>
             <h5 className="text-blue font-italic mb-0">
               <span className="mr-1">$</span>
               {price}
