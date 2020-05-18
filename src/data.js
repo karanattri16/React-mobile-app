@@ -14,7 +14,7 @@ export const storeProducts = [
   {
     id: 2,
     title: "Iphone 11 Pro",
-    img: ["img/iphone images/iphone 11 pro 2.jpg","img/iphone images/iphone 11 pro.jpg","img/iphone images/iphone 11 pro 3.jpg","img/iphone images/product-2.png"],
+    img: ["img/product-2.png"],
     price: 1000,
     company: "Apple",
     info:
