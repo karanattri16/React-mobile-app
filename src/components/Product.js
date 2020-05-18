@@ -5,9 +5,38 @@ import { ProductConsumer } from "../Context";
 import PropTypes from "prop-types";
 
 class Product extends Component {
-  
   render() {
     const { id, title, img, price, inCart } = this.props.product;
+    
+    const images =[...img]
+    var timer ;
+    var i=0;
+    const startrun = (e)=>{
+      console.log(e.target.id)
+      console.log(images[i]);
+      document.getElementById(e.target.id).src= images[i];
+      if(i<images.length-1)
+      {
+        i++;
+      }
+      else{
+        i=0;
+      }
+    }
+    // const sliderun = (e)=>{
+    //   timer = setInterval(startrun(e),1000);
+
+    // }
+    // const sliderun=(e)=>{
+    //   console.log(images)
+    //   console.log(e.target.name)
+    //   console.log(e.target.id)
+    //   console.log("sliderun");
+    //   timer = setInterval(startSlide,2000);  
+    // }
+     const endSlide =()=>{
+      clearInterval(timer);
+    }
     
     return (
       <ProductWrapper className="col-9 mx-auto col-sm-6 col-md-4 col-lg-3 my-3">
@@ -21,7 +50,7 @@ class Product extends Component {
                 }}
               >
                 <Link to="/details">
-                  <img src={img} alt="product" className="card-img-top"/>
+                  <img id={id}  src={images[0]} alt="product" onMouseOver={(e)=>(setInterval(startrun(e),2000))} onMouseOut={endSlide} className="card-img-top"/>
                 </Link>
                 <button
                   className="cart-btn"
