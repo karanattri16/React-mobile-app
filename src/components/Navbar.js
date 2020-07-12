@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 import styled from "styled-components";
 import { ButtonContainer } from "./Button";
-
+import {ProductConsumer} from '../Context'
 class Navbar extends Component {
   render() {
     return (
@@ -23,13 +23,22 @@ https://www.iconfinder.com/Makoto_msk */}
               </Link>
             </li>
           </ul>
-          <Link to="/cart" className="ml-auto">
-            <ButtonContainer>
-              <span className="mr-2">
-                <i className="fas fa-cart-plus">my cart</i>
-              </span>
-            </ButtonContainer>
-          </Link>
+       <ProductConsumer>
+            {value=>{
+              const cart = value.cart;
+              return(
+                <Link to="/cart" className="ml-auto">
+                  <ButtonContainer>
+                    <span className="mr-2">
+                      <i className="fas fa-cart-plus">my cart 
+                      {cart.length>0 &&<span className="m-2 badge badge-light badge-small">{cart.length}</span>}
+                      </i>
+                    </span>
+                  </ButtonContainer>
+                </Link>
+              )
+            }}
+          </ProductConsumer>   
         </NavWrapper>
       </div>
     );
