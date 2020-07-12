@@ -30,8 +30,8 @@ https://www.iconfinder.com/Makoto_msk */}
                 <Link to="/cart" className="ml-auto">
                   <ButtonContainer>
                     <span className="mr-2">
-                      <i className="fas fa-cart-plus">my cart 
-                      {cart.length>0 &&<span className="m-2 badge badge-light badge-small">{cart.length}</span>}
+                      <i className="fas fa-cart-plus">my cart
+                        {cart.length>0 &&<span className="m-2 badge badge-warning badge-small">{cart.length}</span>}
                       </i>
                     </span>
                   </ButtonContainer>
