@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PayPalButton from "../PayPal.Button";
+//import PayPalButton from "../PayPal.Button";
 export default function CartTotals({ value, history }) {
   const { cartSubTotal, cartTax, cartTotal, clearCart } = value;
 
